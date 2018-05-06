@@ -11,9 +11,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
+            android:id="@+id/text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1" tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"/>
+
+    <EditText android:id="@+id/input" android:width="220px"
+              android:layout_height="50dp"
+              android:layout_width="0dp" app:layout_constraintRight_toLeftOf="@+id/button"
+              tools:layout_constraintTop_creator="1" tools:layout_constraintRight_creator="1"
+              android:layout_marginStart="6dp" android:layout_marginEnd="4dp" android:layout_marginTop="16dp"
+              tools:layout_constraintLeft_creator="1" app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:id="@+id/button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Search repos" tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="parent" app:layout_constraintBaseline_toBaselineOf="@+id/input"
+            tools:layout_constraintBaseline_creator="1" tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
